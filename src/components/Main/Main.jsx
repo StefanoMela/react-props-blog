@@ -15,7 +15,10 @@ function Main() {
   return (
     <>
       <section className="main">
-        <h2>Il mio blog</h2>
+        <div>
+        <h1>Il mio blog</h1>
+        </div>
+        <div className="cards">
         {posts.map((post) => (
           <Card
             key={`postCard${post.id}`}
@@ -26,6 +29,9 @@ function Main() {
             published={post.published}
           />
         ))}
+        </div>
+
+        <div>
         <section className="tags">
           <h2>Tags</h2>
           <div>
@@ -36,6 +42,7 @@ function Main() {
             ))}
           </div>
         </section>
+        </div>
       </section>
     </>
   );

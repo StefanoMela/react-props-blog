@@ -4,6 +4,19 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-color: #b78e8e;
+    height: 100%;
+    
+    h1{
+        text-transform: uppercase;
+    }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .tags{
