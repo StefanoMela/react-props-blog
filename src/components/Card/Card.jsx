@@ -13,11 +13,21 @@ const Card = ({ title, image, content, tags, published }) => {
       <div className={cardStyle.cardBody}>
         <h3 className={cardStyle.textLeft}>{title}</h3>
         <p>{content}</p>
-        <div className={cardStyle.tags}>
-          {tags.map((tag, index) => (
-            <span key={`tag${index}`}>{tag}</span>
-          ))}
-        </div>
+        {tags.length > 0 && (
+          <div className={cardStyle.tagContainer}>
+            <span>
+              <b>Tags:</b>
+            </span>
+            {tags.map((tag, index) => (
+              <span
+                key={`tag${index}`}
+                className={`${cardStyle.tag} ${cardStyle[tag]}`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <Button />
       </div>
     </div>

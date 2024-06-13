@@ -30,3 +30,31 @@
     width: 100%;
     border-radius: 0 0 5px 5px;
 }
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.tag{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+.html{
+    background-color: #e44d26;
+}
+
+.css{
+    background-color: #264de4;
+}
+
+.js{
+    background-color: #f0db4f;
+}
+
+.php{
+    background-color: #777BB4;
+}

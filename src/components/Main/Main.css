@@ -5,3 +5,22 @@
     align-items: center;
     padding: 2rem;
 }
+
+.tags{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.tag{
+    margin: 0 .5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: #DAA520;
+    color: #ffff;
+    font-size: .8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
