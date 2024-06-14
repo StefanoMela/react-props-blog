@@ -8,6 +8,9 @@ const Card = ({ title, image, content, tags, published }) => {
     >
       <img
         src={image ? image : "https://picsum.photos/600/400"}
+        // soluzione più corretta sarebbe stata l'operatore ||,
+        // poiché essendo un circuito chiuso il ternario è superfluo e possiamo fare direttamente
+        //  src={image || "https://picsum.photos/600/400"}
         alt="post-image"
       />
       <div className={cardStyle.cardBody}>
