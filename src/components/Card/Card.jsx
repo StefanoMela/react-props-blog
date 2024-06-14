@@ -4,7 +4,7 @@ import cardStyle from "./Card.module.css";
 const Card = ({ title, image, content, tags, published }) => {
   return (
     <div
-      className={`${cardStyle.card} ${published ? "" : cardStyle.notPublished}`}
+      className={`${cardStyle.card} ${published ? "" : cardStyle.notPublished}`} // andava fatto una condizione per mostrare o no il post su main.jsx
     >
       <img
         src={image ? image : "https://picsum.photos/600/400"}

@@ -13,13 +13,12 @@ function Main() {
   }, []);
 
   return (
-    <>
-      <section className="main">
-        <div>
-        <h1>Il mio blog</h1>
-        </div>
-        <div className="cards">
+    /***
+     *
+     * invece di mappare e portare tutte le card dobbiamo farlo solo per i post pubblicati. E' ok come abbiamo fatto ma ancora meglio così:
+      <main>
         {posts.map((post) => (
+          {post.published && 
           <Card
             key={`postCard${post.id}`}
             title={post.title}
@@ -27,21 +26,41 @@ function Main() {
             content={post.content}
             tags={post.tags}
             published={post.published}
-          />
+          />}
         ))}
+      </main>
+     *
+     */
+
+    <>
+      <section className="main">
+        <div>
+          <h1>Il mio blog</h1>
+        </div>
+        <div className="cards">
+          {posts.map((post) => (
+            <Card
+              key={`postCard${post.id}`}
+              title={post.title}
+              image={post.image}
+              content={post.content}
+              tags={post.tags}
+              published={post.published}
+            />
+          ))}
         </div>
 
         <div>
-        <section className="tags">
-          <h2>Tags</h2>
-          <div>
-            {uniqueTags.map((tag, index) => (
-              <span key={`uniqueTag${index}`} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </section>
+          <section className="tags">
+            <h2>Tags</h2>
+            <div>
+              {uniqueTags.map((tag, index) => (
+                <span key={`uniqueTag${index}`} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
     </>
